@@ -16,14 +16,22 @@ ActiveRecord::Schema.define(version: 2020_01_30_183033) do
   enable_extension "plpgsql"
 
   create_table "auctions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "sound_id"
+    t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sound_id"], name: "index_auctions_on_sound_id"
+    t.index ["user_id"], name: "index_auctions_on_user_id"
   end
 
   create_table "sounds", force: :cascade do |t|
     t.string "title"
+    t.integer "price"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sounds_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

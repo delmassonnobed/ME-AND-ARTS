@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+Sound.destroy_all
+Auction.destroy_all
+
+user_1 = User.new(email: 'me@hotmail.com', password: 'hello123')
+user_1.save
+
+user_2 = User.new(email: 'mika@hotmail.com', password: '12345678')
+user_2.save
+
+user_3 = User.new(email: 'jenni@hotmail.com', password: '12345678')
+user_3.save
+
+sound_1 = Sound.new(title: 'Coolsound', price: 20, user_id: user_1.id)
+sound_1.save
+
+sound_2 = Sound.new(title: 'Coolersound', price: 30, user_id: user_1.id)
+sound_2.save
+
+sound_3 = Sound.new(title: 'Rap song from Mika', price: 25, user_id: user_2.id)
+sound_3.save
+
+sound_4 = Sound.new(title: 'Pop song from Mika', price: 45, user_id: user_2.id)
+sound_4.save
+
+auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)
+
+auction_2 = Auction.create(amount: 108, user_id: user_3.id, sound_id: sound_3.id)
+
+auction_3 = Auction.create(amount: 388, user_id: user_1.id, sound_id: sound_4.id)

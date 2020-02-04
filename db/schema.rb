@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2020_02_01_160751) do
   end
 
   create_table "sounds", force: :cascade do |t|
-    t.string "title"
-    t.integer "price"
+    t.string "title", null: false
+    t.integer "price" ,
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

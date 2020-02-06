@@ -1,3 +1,48 @@
 <%= @sounds.index  %>
 
 <p>Hmmmm Yeaaah</p>
+  <div id="title">
+    <span id="track"></span>
+    <div id="timer">0:00</div>
+    <p id="title">hello</p>
+    <div id="duration">0:00</div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controlsOuter">
+    <div class="controlsInner">
+      <div id="loading"></div>
+      <div class="btn" id="playBtn">play</div>
+      <div class="btn" id="pauseBtn">payse</div>
+      <div class="btn" id="prevBtn">previous</div>
+      <div class="btn" id="nextBtn">next</div>
+    </div>
+    <div class="btn" id="playlistBtn"></div>
+    <div class="btn" id="volumeBtn"></div>
+  </div>
+
+  <!-- Progress -->
+  <div id="waveform"></div>
+  <div id="siri-container"></div>
+  <script>
+  var siriWave = new SiriWave({
+    container: document.getElementById('siri-container'),
+    width: 640,
+    height: 200,
+  });
+  </script>
+  <div id="bar"></div>
+  <div id="progress"></div>
+
+  <!-- Playlist -->
+  <div id="playlist">
+    <div id="list"></div>
+  </div>
+
+  <!-- Volume -->
+  <div id="volume" class="fadeout">
+    <div id="barFull" class="bar"></div>
+    <div id="barEmpty" class="bar"></div>
+    <div id="sliderBtn"></div>
+  </div>
+

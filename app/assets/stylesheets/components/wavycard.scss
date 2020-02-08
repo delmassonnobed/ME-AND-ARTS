@@ -1,0 +1,64 @@
+.wavy-card {
+  padding: 10px;
+  height: 400px;
+  width: 600px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb71f3', endColorstr='#3d4d91', GradientType=1);
+  background: #bb71f3;
+  background: -moz-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
+  background: -webkit-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
+  background: linear-gradient(135deg, #bb71f3 0%, #3d4d91 100%);
+  position: relative;
+
+}
+
+.wavy-card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+
+
+.wavy-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.wavy-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+// .wavy-card .wavy-card-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}

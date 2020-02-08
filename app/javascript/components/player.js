@@ -57,7 +57,7 @@ Player.prototype = {
       sound = data.howl;
     } else {
       sound = data.howl = new Howl({
-        src: ['./audio/' + data.file + '.webm', './audio/' + data.file + '.mp3'],
+        src: ['https://raw.githubusercontent.com/goldfire/howler.js/master/examples/player/audio/80s_vibe.mp3'],
         html5: true, // Force to HTML5 so that the audio can stream in (best for large files).
         onplay: function() {
           // Display the duration.
@@ -279,8 +279,8 @@ var player = new Player([
     howl: null
   },
   {
-    title: '80s Vibe',
-    file: '80s_vibe',
+    title: '70s Vibe',
+    file: '70s_vibe',
     howl: null
   },
   {

@@ -46,6 +46,7 @@
 .card-head {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .controls {
@@ -67,7 +68,6 @@
   height: 50px;
   width: 100%;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-color: white;
 }
 
 
@@ -82,12 +82,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: white;
 }
 
 .card-desc p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: white;
 }
 
 
@@ -105,3 +107,13 @@
   top: -20px;
   width: 40px;
 }
+
+.pricing {
+  font-size: 40px !important;
+}
+
+#btnench {
+  width : 80px;
+  height: 45px;
+}
+

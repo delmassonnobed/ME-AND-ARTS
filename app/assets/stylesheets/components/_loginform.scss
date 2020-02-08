@@ -1,0 +1,27 @@
+*{color: #fff}
+
+.form-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('studioo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.bg{border:0px solid; padding:20px 30px ; margin-top: 10vh; -webkit-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);}
+
+
+.btn {
+width: 100%;
+margin-bottom: 20px;
+
+}
+.form-linques {
+  text-transform: none;
+  color: #33CC33;
+
+  &:hover {
+    color: red;
+  }
+}

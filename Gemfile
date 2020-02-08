@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'cloudinary', '~> 1.12.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'dotenv-rails', groups: [:development, :test]
 

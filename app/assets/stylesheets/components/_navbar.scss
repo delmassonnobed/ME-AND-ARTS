@@ -1,12 +1,26 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: #f8b195;
-}
+.navbar
+{
+background: linear-gradient(#be8abf, #1C0654);
 
+font-family: 'Montserrat', sans-serif;
+
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
 }
+
+.nav-white { color: white;
+margin-right: 150px;}
+
+.nav-white:hover {
+  color: #130236;
+  text-decoration: none;
+}
+
+.class-name{
+  background-color: rgba(0,0,0,.5);
+  }

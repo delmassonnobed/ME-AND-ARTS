@@ -1,3 +1,7 @@
+<% @sounds.each do |sound| %>
+
+<div class="d-flex flex-row flex-wrap">
+
 <div class="wavy-card">
   <div id="progress">
   </div>
@@ -48,7 +52,7 @@
     <h2>Title here</h2>
     <p>Short description here!</p>
   </div>
-  <button type="button" class="btn btn-warning" id="btnench">BID !</button>
+  <%= link_to 'Follow', auction_path(@auction) %>
    <h2 class="pricing">£99.99</h2>
    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-desc-user avatar-bordered" />
 </div>
@@ -58,4 +62,7 @@
 
 
 </div>
+</div>
 
+
+<% end %>

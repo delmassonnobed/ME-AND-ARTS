@@ -10,7 +10,7 @@ gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'cloudinary', '~> 1.12.0'
-gem 'dotenv-rails', groups: [:development, :test, :production]
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

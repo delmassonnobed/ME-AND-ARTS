@@ -1,4 +1,4 @@
-
+import {Howl, Howler} from 'howler';
 /*!
  *  Howler.js Audio Player Demo
  *  howlerjs.com
@@ -11,7 +11,7 @@
 
 
 // Cache references to DOM elements.
-var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
+var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn', 'waveform'];
 elms.forEach(function(elm) {
   window[elm] = document.getElementById(elm);
 });

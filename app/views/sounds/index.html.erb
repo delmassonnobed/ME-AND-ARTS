@@ -1,2 +1,6 @@
 <%= render 'shared/card' %>
-<%= @sounds %>
+<%#= @sounds %>
+
+<% current_user.auctions.each do |auction| %>
+  <p><%= auction.sound.title %></p>
+<% end %>

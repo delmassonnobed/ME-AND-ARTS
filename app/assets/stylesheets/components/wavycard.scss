@@ -9,7 +9,7 @@
   margin-top: 100px;
   height: 200px;
   width: 400px;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb71f3', endColorstr='#3d4d91', GradientType=1);
   background: #bb71f3;
@@ -68,7 +68,6 @@
 }
 
 .card-desc {
-  overflow: scroll;
   display: flex;
   justify-content: space-between;
   height: 50px;

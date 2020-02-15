@@ -3,9 +3,12 @@ def show
   @sound = Sound.find(params[:id])
   @auction = Auction.new
 
-@max_auction = @sound.auctions.map{|auction| auction.amount}.compact.max
-@my_max = @sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max
+  @max_auction = @sound.auctions.map{|auction| auction.amount}.compact.max
+  @my_max = @sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max
+end
 
+def my_sounds
+  @sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
 end
 
 def index

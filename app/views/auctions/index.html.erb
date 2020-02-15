@@ -54,7 +54,14 @@
     <p><%= sound.genre %></p>
   </div>
   <%= link_to 'Bid !', sound_path(sound) %>
-   <h2 class="pricing"><%= sound.amount %> $$</h2>
+     <h2 class="pricing">
+    <% if sound.auctions.empty? %>
+     <%= "#{sound.price} $" %>
+    <% else %>
+     <%= "#{sound.auctions.map{|auction| auction.amount}.compact.max} $" %>
+     <% end %>
+
+   </h2>
    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-desc-user avatar-bordered" />
 </div>
  </div>

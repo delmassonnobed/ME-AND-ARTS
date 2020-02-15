@@ -35,7 +35,7 @@ sound_4 = Sound.new(title: 'Pop song from Mika', bpm: 112, genre: "Rock" ,price:
 
 sound_4.save
 
-auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id,maxprice: 100)
+auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)
 
 auction_2 = Auction.create(amount: 10, user_id: user_3.id, sound_id: sound_3.id)
 

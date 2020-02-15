@@ -7,7 +7,11 @@ class AuctionsController < ApplicationController
   end
 
   def show
-    @auction = Auction.first
+    @auction = Auction.find(id=params[:id])
+    @user = User.find_by_id(@auction.user_id)
+    raise
+    @timer = @auction.created_at
+
   end
 
 end

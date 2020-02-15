@@ -1,11 +1,25 @@
 <% if @sound.auctions.empty? %>
  <%= "#{@sound.price} $" %>
 <% else %>
- <%= "#{@sound.auctions.map{|auction| auction.amount}.max} $" %>
+ <%= "#{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %>
 <% end %>
 
 <%= simple_form_for [@sound, @auction] do |f| %>
  <%= f.input :amount %>
  <%= f.submit "bid", class: "" %>
 <%  end%>
+
+<% if @sound.sold == true %>
+  <% if @max_auction == @my_max %>
+    <%= "Won" %>
+  <% else %>
+    <%= "Lost" %>
+  <% end %>
+<% else %>
+  <% if @max_auction == @my_max %>
+     <%= "You have the highest bid" %>
+  <% else %>
+     <%= "Someone else has a higher bid" %>
+  <% end %>
+<% end %>
 

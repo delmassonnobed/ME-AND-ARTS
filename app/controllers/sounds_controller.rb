@@ -12,7 +12,11 @@ def my_sounds
 end
 
 def index
-  @sounds = Sound.all
+  if params[:search]
+    @sounds = Sound.search_by_title_and_genre(params[:search])
+  else
+    @sounds = Sound.all
+  end
   @auction = Auction.first
 end
 

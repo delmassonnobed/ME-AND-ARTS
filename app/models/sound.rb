@@ -5,7 +5,16 @@ class Sound < ApplicationRecord
   validates :bpm, presence: true
   validates :genre, presence: true
 
+  has_one_attached :mp3_file
+
   has_many :auctions, dependent: :destroy
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_and_genre,
+    against: [ :title, :genre ],
+    using: {
+      tsearch: { prefix: true }
+    }
 
   def won_by_me?(user)
     return false if auctions.empty?
@@ -17,3 +26,4 @@ class Sound < ApplicationRecord
     return max_bid == my_max_bid
   end
 end
+

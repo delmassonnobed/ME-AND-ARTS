@@ -5,7 +5,6 @@ class AuctionsController < ApplicationController
     @following_sounds = current_user.followings.map {|following|
       following.sound}
     @my_sounds = [@auction_sounds + @following_sounds].flatten
-
   end
 
   def show

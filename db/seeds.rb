@@ -20,6 +20,9 @@ user_3 = User.new(email: 'jenni@hotmail.com', password: '12345678')
 user_3.save
 
 sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100)
+file = File.open("app/assets/images/joli.jpg")
+sound_1.mp3_file.attach(io: file, filename: 'sound_1.mp3')
+
 sound_1.save
 
 sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150)
@@ -32,7 +35,7 @@ sound_4 = Sound.new(title: 'Pop song from Mika', bpm: 112, genre: "Rock" ,price:
 
 sound_4.save
 
-auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)
+auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id,maxprice: 100)
 
 auction_2 = Auction.create(amount: 10, user_id: user_3.id, sound_id: sound_3.id)
 

@@ -1,4 +1,8 @@
 class SoundsController < ApplicationController
+def show
+  @sound = Sound.find(params[:id])
+  @auction = Auction.new
+end
 
 def index
   @sounds = Sound.all

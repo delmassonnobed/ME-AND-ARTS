@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-between">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://res.cloudinary.com/dofat3r9t/image/upload/v1580844678/ME_ARTS-01_kas263.png" %>
+  <%= link_to sounds_path, class: "navbar-brand" do %>
+    <%= image_tag "meandarts.png" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,18 +10,12 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item active">
-          <%= link_to "Home", sounds_path, class: "nav-white" %>
-        </li>
         <li class="nav-item">
           <%= link_to "My Auctions", auctions_path, class: "nav-white" %>
 
         </li>
         <li class="nav-item">
-          <%= link_to "Sound Bank", sounds_path, class: "nav-white" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Ending soon !", "#", class: "nav-white" %>
+          <%= link_to "Sound Bank", my_sounds_path, class: "nav-white" %>
         </li>
     </ul>
   </div>
@@ -34,3 +28,4 @@
           </div>
         </div>
 </div>
+

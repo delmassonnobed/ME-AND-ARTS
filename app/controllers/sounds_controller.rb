@@ -9,7 +9,11 @@ def show
 end
 
 def index
-  @sounds = Sound.all
+  if params[:search]
+    @sounds = Sound.where(genre: params[:search])
+  else
+    @sounds = Sound.all
+  end
   @auction = Auction.first
 end
 

@@ -2,6 +2,10 @@ class SoundsController < ApplicationController
 def show
   @sound = Sound.find(params[:id])
   @auction = Auction.new
+
+@max_auction = @sound.auctions.map{|auction| auction.amount}.compact.max
+@my_max = @sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max
+
 end
 
 def index

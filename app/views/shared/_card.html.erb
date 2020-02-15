@@ -57,7 +57,7 @@
     <% if sound.auctions.empty? %>
      <%= "#{sound.price} $" %>
     <% else %>
-     <%= "#{sound.auctions.map{|auction| auction.amount}.max} $" %>
+     <%= "#{sound.auctions.map{|auction| auction.amount}.compact.max} $" %>
      <% end %>
 
    </h2>

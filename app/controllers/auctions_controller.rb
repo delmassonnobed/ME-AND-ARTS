@@ -1,6 +1,7 @@
 class AuctionsController < ApplicationController
   def index
-    @auctions = Auction.all
+    @auctions = current_user.auctions
+
   end
 
   def show

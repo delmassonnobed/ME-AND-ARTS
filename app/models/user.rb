@@ -6,8 +6,9 @@ class User < ApplicationRecord
 
   has_many :sounds, dependent: :destroy
   has_many :auctions, dependent: :destroy
-
+  has_many :followings, dependent: :destroy
 
   validates :email, presence: true
   validates :encrypted_password, presence: true
+
 end

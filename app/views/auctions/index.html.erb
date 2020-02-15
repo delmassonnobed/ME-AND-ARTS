@@ -1,6 +1,6 @@
 <h1>hello</h1>
 
-<% @auctions.each do |auction| %>
+<% @my_sounds.each do |sound| %>
 <div class="d-flex flex-row flex-wrap">
 
 <div class="wavy-card">
@@ -50,11 +50,11 @@
     <div class="card-desc">
 
    <div>
-    <h2>  <%= auction.sound.title %></h2>
-    <p><%= auction.sound.genre %></p>
+    <h2>  <%= sound.title %></h2>
+    <p><%= sound.genre %></p>
   </div>
-  <%= link_to 'Bid !', auctions_path(@auction) %>
-   <h2 class="pricing"><%= auction.amount %> $$</h2>
+  <%= link_to 'Bid !', sound_path(sound) %>
+   <h2 class="pricing"><%= sound.amount %> $$</h2>
    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-desc-user avatar-bordered" />
 </div>
  </div>

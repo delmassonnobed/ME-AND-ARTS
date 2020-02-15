@@ -10,7 +10,7 @@ end
 
 def index
   if params[:search]
-    @sounds = Sound.where(genre: params[:search])
+    @sounds = Sound.search_by_title_and_genre(params[:search])
   else
     @sounds = Sound.all
   end

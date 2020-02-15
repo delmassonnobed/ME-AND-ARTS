@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_110041) do
+ActiveRecord::Schema.define(version: 2020_02_15_153831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_02_15_110041) do
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "maxprice"
     t.index ["sound_id"], name: "index_auctions_on_sound_id"
     t.index ["user_id"], name: "index_auctions_on_user_id"
   end

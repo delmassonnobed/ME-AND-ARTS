@@ -1,6 +1,10 @@
 class AuctionsController < ApplicationController
   def index
-    @auctions = current_user.auctions
+    @auction_sounds = current_user.auctions.map {|auction|
+      auction.sound}
+    @following_sounds = current_user.followings.map {|following|
+      following.sound}
+    @my_sounds = [@auction_sounds + @following_sounds].flatten
 
   end
 

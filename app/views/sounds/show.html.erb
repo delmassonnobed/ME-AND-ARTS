@@ -1,0 +1,11 @@
+<% if @sound.auctions.empty? %>
+ <%= "#{@sound.price} $" %>
+<% else %>
+ <%= "#{@sound.auctions.map{|auction| auction.amount}.max} $" %>
+<% end %>
+
+<%= simple_form_for [@sound, @auction] do |f| %>
+ <%= f.input :amount %>
+ <%= f.submit "bid", class: "" %>
+<%  end%>
+

@@ -5,5 +5,7 @@ class Sound < ApplicationRecord
   validates :bpm, presence: true
   validates :genre, presence: true
 
+  has_one_attached :mp3_file
+
   has_many :auctions, dependent: :destroy
 end

@@ -1,6 +1,13 @@
+<form accept-charset="UTF-8" action="/sounds" method="get">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input id="q" name="search" type="text" />
+  <input name="commit" type="submit" value="Search" />
+</form>
+
 <%= render 'shared/card' %>
 <%#= @sounds %>
 
 <% current_user.auctions.each do |auction| %>
   <p><%= auction.sound.title %></p>
 <% end %>
+

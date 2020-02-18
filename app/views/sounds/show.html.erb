@@ -7,13 +7,13 @@
 
 <%= simple_form_for [@sound, @auction] do |f| %>
   <%= f.input :amount, :label => "Make a bid !" %>
+  <%= f.input :amount, :label => "Buy now !", input_html: {value: @sound.maxprice, id: 'maxprice'}, disabled: true  %>
+
  <%= f.submit "bid", class: "" %>
+  <%= f.submit "buy" %>
+
 <%  end%>
 <br>
-<%= simple_form_for [@sound, @auction] do |f| %>
-  <%= f.input :amount, :label => "Buy now !", input_html: {value: @sound.maxprice, id: 'maxprice'}, disabled: true  %>
- <%= f.submit "buy", class: "" %>
-<%  end%>
 
 <% if @sound.sold == true %>
   <% if @max_auction == @my_max %>

@@ -1,12 +1,18 @@
 <% if @sound.auctions.empty? %>
- <%= "#{@sound.price} $" %>
+  <%= "Starting price : #{@sound.price} $" %>
 <% else %>
- <%= "#{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %>
+ <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
+ <%= "Instant buy price : #{@sound.maxprice}" %>
 <% end %>
 
 <%= simple_form_for [@sound, @auction] do |f| %>
- <%= f.input :amount %>
+  <%= f.input :amount, :label => "Make a bid !" %>
  <%= f.submit "bid", class: "" %>
+<%  end%>
+<br>
+<%= simple_form_for [@sound, @auction] do |f| %>
+  <%= f.input :amount, :label => "Buy now !", input_html: {value: @sound.maxprice, id: 'maxprice'}, disabled: true  %>
+ <%= f.submit "buy", class: "" %>
 <%  end%>
 
 <% if @sound.sold == true %>

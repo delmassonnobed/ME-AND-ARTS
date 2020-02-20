@@ -7,13 +7,11 @@
 
 <%= simple_form_for [@sound, @auction] do |f| %>
   <%= f.input :amount, :label => "Make a bid !" %>
-  <%= f.input :amount, :label => "Buy now !", input_html: {value: @sound.maxprice, id: 'maxprice'}, disabled: true  %>
-
- <%= f.submit "bid", class: "" %>
-  <%= f.submit "buy" %>
-
+  <%= f.submit "bid" %>
 <%  end%>
 <br>
+
+<%= link_to "Buy now", buy_sound_path(@sound), method: :patch %>
 
 <% if @sound.sold == true %>
   <% if @max_auction == @my_max %>

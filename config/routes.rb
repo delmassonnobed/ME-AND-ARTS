@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'my_sounds', to: 'sounds#my_sounds', as: :my_sounds
 
   resources :sounds, only: [:show, :index, :new, :create] do
+    member do
+      patch 'buy'
+    end
     resources :auctions, only: [:new, :create]
    end
    resources :auctions, only: [:index, :show]

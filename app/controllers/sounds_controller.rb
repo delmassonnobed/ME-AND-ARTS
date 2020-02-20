@@ -1,28 +1,32 @@
 class SoundsController < ApplicationController
-def show
-  @sound = Sound.find(params[:id])
-  @auction = Auction.new
+  def show
+    @sound = Sound.find(params[:id])
+    @auction = Auction.new
 
-  @max_auction = @sound.auctions.map{|auction| auction.amount}.compact.max
-  @my_max = @sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max
-end
-
-def my_sounds
-  @sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
-end
-
-def index
-  if params[:search]
-    @sounds = Sound.search_by_title_and_genre(params[:search])
-  else
-    @sounds = Sound.all
+    @max_auction = @sound.auctions.map{|auction| auction.amount}.compact.max
+    @my_max = @sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max
   end
-  @auction = Auction.first
-end
 
-def new
-  @sound = Sound.new
-end
+  def my_sounds
+    @sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
+  end
+
+  def index
+    if params[:search]
+      @sounds = Sound.search_by_title_and_genre(params[:search])
+    else
+      @sounds = Sound.all
+    end
+    @auction = Auction.first
+  end
+
+  def new
+    @sound = Sound.new
+  end
+
+  def buy
+    raise
+  end
 
 
 

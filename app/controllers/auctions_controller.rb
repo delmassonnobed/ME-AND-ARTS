@@ -18,11 +18,10 @@ class AuctionsController < ApplicationController
     @auction.user_id = current_user.id
     @sound = Sound.find(params[:sound_id])
     @auction.sound_id = @sound.id
-    @auction.save
     if @auction.save
       redirect_to sound_path(@sound)
     else
-      render action: "show", controller: "sounds"
+      render "sounds/show"
     end
   end
 

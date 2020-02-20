@@ -1,11 +1,19 @@
-<div id="home-page-index">
-  <form accept-charset="UTF-8" action="/sounds" method="get">
-    <input name="utf8" type="hidden" value="&#x2713;" />
-    <input id="q" name="search" type="text" class="text-black" />
-    <input name="commit" type="submit" value="Search" class="text-black"/>
-  </form>
+<div class="banner">
 
-  <%= render 'shared/card' %>
+  <div class="container">
+    <h1>Find your beats </h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+
+  <div class=" container duv">
+    <form accept-charset="UTF-8" action="/sounds" method="get">
+      <input name="utf8" type="hidden" value="&#x2713;" />
+      <input id="q" name="search" type="text" class="text-black" />
+      <input name="commit" type="submit" value="Search" class="text-black"/>
+    </form>
+  </div>
 </div>
 
 
+<%= render 'shared/card' %>

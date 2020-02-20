@@ -25,7 +25,10 @@ class SoundsController < ApplicationController
   end
 
   def buy
-    raise
+    @sound = Sound.find(params[:id])
+    @sound.sold = true
+    @sound.owner = current_user.id
+    @sound.save
   end
 
 

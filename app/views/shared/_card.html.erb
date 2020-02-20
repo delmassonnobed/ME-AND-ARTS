@@ -46,11 +46,11 @@
     <div id="barEmpty" class="bar"></div>
     <div id="sliderBtn"></div>
   </div>
-    <div class="card-desc">
 
+    <div class="card-desc">
    <div>
-    <h2><%= sound.title %></h2>
     <p><%= sound.genre %></p>
+    <p><%= "Bpm: #{sound.bpm}" %></p>
   </div>
   <%= link_to 'Bid', sound_path(sound) %>
    <h2 class="pricing">

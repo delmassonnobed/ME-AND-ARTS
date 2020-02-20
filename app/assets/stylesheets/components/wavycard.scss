@@ -8,14 +8,15 @@
   margin-bottom: 100px;
   margin-top: 100px;
   height: 200px;
-  width: 400px;
+  width: 500px;
   overflow: scroll;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb71f3', endColorstr='#3d4d91', GradientType=1);
-  background: #bb71f3;
-  background: -moz-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
-  background: -webkit-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
-  background: linear-gradient(-40deg, #be8abf 0%, #1C0654 100%);
+  background: rgba(0, 0, 250, 0.3);;
+  // background: #bb71f3;
+  // background: -moz-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
+  // background: -webkit-linear-gradient(-45deg, #bb71f3 0%, #3d4d91 100%);
+  // background: linear-gradient(-40deg, #be8abf 0%, #1C0654 100%);
   position: relative;
   }
 
@@ -56,7 +57,6 @@
   justify-content: space-between;
   height: 50px;
   width: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
@@ -99,7 +99,7 @@
 }
 
 .pricing {
-  font-size: 40px !important;
+  font-size: 25px !important;
 }
 
 #btnench {

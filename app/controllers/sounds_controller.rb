@@ -24,6 +24,8 @@ def new
   @sound = Sound.new
 end
 
+
+
 def create
  @sound = Sound.new(sound_params)
  @sound.user = current_user
@@ -33,7 +35,6 @@ def create
     render :new
   end
 end
-
 
 private
 

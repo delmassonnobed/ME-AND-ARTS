@@ -1,3 +1,11 @@
 <div id="home-page-index">
   <%= render 'shared/card' %>
 </div>
+
+<% @sounds.each do |sound| %>
+<% if @sounds.mp3_file.attachment %>
+  <%= link_to sound.mp3_file.attachment.filename, rails_blob_path(sound.mp3_file.attachment, disposition: 'attachment') %>
+  <% end %>
+<% end %>
+
+

@@ -34,15 +34,15 @@ sound_3 = Sound.new(title: 'Beat this', bpm: 120, genre: "Pop" ,price: 25, user_
 sound_3.save
 
 url_4 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582369437/T.I._feat_Young_Thug_-_Aint_About_The_Money_official_instrumental_jknwm0.mp3"
-sound_4 = Sound.new(title: 'Rap song', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 1200, audio_url: url_3)
+sound_4 = Sound.new(title: 'Rap song', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 1200, audio_url: url_4)
 sound_4.save
 
 url_5 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582370909/engelwood_-_crystal_dolphin_1_ywxhiz.mp3"
-sound_5 = Sound.new(title: 'Dolphins', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 180, audio_url: url_3)
+sound_5 = Sound.new(title: 'Dolphins', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 180, audio_url: url_5)
 sound_5.save
 
 url_6 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582370974/Miss_Chang_-_Chinese_Man_feat_Taiwan_MC_Cyph4_-_OFFICIAL_VIDEO_q5dvff.mp3"
-sound_6 = Sound.new(title: 'Miss Chang', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
+sound_6 = Sound.new(title: 'Miss Chang', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_6)
 sound_6.save
 
 auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)

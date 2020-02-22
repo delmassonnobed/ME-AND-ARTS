@@ -1,18 +1,17 @@
-<div class="container">
-<div class="row">
 
-  <div class="col-6">
 <% @sounds.each do |sound| %>
   <% if sound.sold == false %>
+<div class="d-flex flex-row flex-wrap">
 
-  <div class="wavy-card">
-    <div id="progress"></div>
-    <div class="wavy-card-1">
-      <div class="card-head" id="title">
-        <div id="timer">0:00</div>
-        <span id="track"></span>
-        <div id="duration">0:00</div>
-    </div>
+<div class="wavy-card" id="sound-<%= sound.id %>" data-url="<%= sound.audio_url %>">
+  <div id="progress">
+  </div>
+  <div class="wavy-card-1">
+  <div class="card-head" id="title">
+    <div id="timer">0:00</div>
+    <span id="track"></span>
+    <div id="duration">0:00</div>
+  </div>
 
 
   <div class="wavediv">
@@ -26,28 +25,9 @@
     </div>
   </div>
 
-
-   <div class="card-foot">
-    <div class="btn" id="playlistBtn"></div>
-    <div class="controls">
-     <div class="controlsOuter">
-       <div class="controlsInner">
-        <div id="loading"></div>
-        <div class="btn" id="prevBtn"></div>
-        <div class="btn" id="pauseBtn"></div>
-        <div class="btn" id="playBtn"></div>
-        <div class="btn" id="nextBtn"></div>
-      </div>
-     </div>
-    </div>
-    <div class="btn" id="volumeBtn"></div>
-  </div>
-
-  <div id="volume" class="fadeout">
-    <div id="barFull" class="bar"></div>
-    <div id="barEmpty" class="bar"></div>
-    <div id="sliderBtn"></div>
-  </div>
+  <audio id="player" controls>
+      <source src="<%= sound.audio_url %>" type="audio/mp3" />
+  </audio>
 
     <div class="card-desc">
    <div>
@@ -63,15 +43,14 @@
      <% end %>
 
    </h2>
+   <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-desc-user avatar-bordered" />
 </div>
  </div>
 
   </div>
 
-</div>
 
+</div>
+</div>
 <% end %>
 <% end %>
-</div>
-</div>
-</div>

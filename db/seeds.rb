@@ -27,13 +27,13 @@ url_2 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447710/Drake_Typ
 sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150, audio_url: url_2)
 sound_2.save
 
-url_3 = Cloudinary::Uploader.upload_large("app/assets/audio/running_out.mp3")["url"]
-sound_3 = Sound.new(title: 'Rap song from Mika', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
+url_3 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582368958/Schoolboy_Q_-_Hell_Of_A_Night_Instrumental_eas8fb.mp3"
+sound_3 = Sound.new(title: 'Beat this', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
 sound_3.save
 
-url_4 = Cloudinary::Uploader.upload_large("app/assets/audio/rave_digger.mp3")["url"]
-sound_3 = Sound.new(title: 'Rap song from Mika', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
-sound_3.save
+url_4 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582369437/T.I._feat_Young_Thug_-_Aint_About_The_Money_official_instrumental_jknwm0.mp3"
+sound_4 = Sound.new(title: 'Rap song', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
+sound_4.save
 
 
 auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)

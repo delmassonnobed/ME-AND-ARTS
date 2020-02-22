@@ -1,5 +1,5 @@
 <% @sounds.each do |sound| %>
-
+  <% if sound.sold == false %>
 <div class="d-flex flex-row flex-wrap">
 
 <div class="wavy-card">
@@ -70,6 +70,5 @@
 
 </div>
 </div>
-
-
+<% end %>
 <% end %>

@@ -29,6 +29,7 @@ class SoundsController < ApplicationController
     @sound.sold = true
     @sound.owner = current_user.id
     @sound.save
+    redirect_to my_sounds_path
   end
 
 

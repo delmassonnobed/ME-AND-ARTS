@@ -1,20 +1,27 @@
 <div class="banner">
-
-  <div class="container">
-    <h1>Find your beats </h1>
+ <div class="container">
+    <div class= "row justify-content-center">
+      <h1>Find your beats </h1>
+    </div>
   </div>
 
   <div class=" container duv">
     <form accept-charset="UTF-8" action="/sounds" method="get">
       <input name="utf8" type="hidden" value="&#x2713;" />
-      <input id="q" name="search" type="text" class="text-black" />
-      <input name="commit" type="submit" value="Search" class="text-black"/>
+      <input id="q" name="search" type="text" class="text-black" placeholder="genre" />
+      <input name="commit" type="submit" value="Search" class="text-black" />
     </form>
   </div>
 </div>
 
-
+<div class= "row justify-content-center most">
+  <h3>Most wanted</h3>
+</div>
 
 
     <%= render 'shared/card' %>
 
+
+</div>
+</div>
+</div>

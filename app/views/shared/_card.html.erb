@@ -4,26 +4,6 @@
 <div class="d-flex flex-row flex-wrap">
 
 <div class="wavy-card" id="sound-<%= sound.id %>" data-url="<%= sound.audio_url %>">
-  <div id="progress">
-  </div>
-  <div class="wavy-card-1">
-  <div class="card-head" id="title">
-    <div id="timer">0:00</div>
-    <span id="track"></span>
-    <div id="duration">0:00</div>
-  </div>
-
-
-  <div class="wavediv">
-
-    <div id="waveform"></div>
-
-    <div id="bar"></div>
-
-     <div id="playlist">
-      <div id="list"></div>
-    </div>
-  </div>
 
   <audio id="player" controls>
       <source src="<%= sound.audio_url %>" type="audio/mp3" />

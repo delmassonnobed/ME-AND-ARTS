@@ -9,6 +9,7 @@ class SoundsController < ApplicationController
 
   def my_sounds
     @sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
+    # @sounds = <<< "Sons gagnes" a ajouter dans la seed
   end
 
   def index
@@ -32,21 +33,19 @@ class SoundsController < ApplicationController
     redirect_to my_sounds_path
   end
 
-
-
-def create
- @sound = Sound.new(sound_params)
- @sound.user = current_user
-  if @sound.save
-    redirect_to sound_path(@sound)
-  else
-    render :new
+  def create
+    @sound = Sound.new(sound_params)
+    @sound.user = current_user
+    if @sound.save
+      redirect_to sound_path(@sound)
+    else
+      render :new
+    end
   end
-end
 
-private
+  private
 
-def sound_params
-  params.require(:sound).permit(:title, :price, :user_id)
-end
+  def sound_params
+    params.require(:sound).permit(:title, :price, :user_id)
+  end
 end

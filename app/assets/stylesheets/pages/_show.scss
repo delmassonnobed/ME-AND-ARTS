@@ -1,0 +1,10 @@
+.parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.enfant_1 {
+  display: flex;
+  flex-direct: column,
+}

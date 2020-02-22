@@ -19,24 +19,6 @@ user_2.save
 user_3 = User.new(email: 'jenni@hotmail.com', password: '12345678')
 user_3.save
 
-sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100)
-
-sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150)
-sound_2.save
-
-sound_3 = Sound.new(title: 'Rap song from Mika', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80)
-sound_3.save
-
-sound_4 = Sound.new(title: 'Pop song from Mika', bpm: 112, genre: "Rock" ,price: 45, user_id: user_2.id, maxprice: 150)
-
-sound_4.save
-
-auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)
-
-auction_2 = Auction.create(amount: 10, user_id: user_3.id, sound_id: sound_3.id)
-
-auction_3 = Auction.create(amount: 38, user_id: user_1.id, sound_id: sound_4.id)
-
 url_1 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447765/Blackthorn_Bedow_c1w6z4.mp3"
 sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100, audio_url: url_1)
 sound_1.save
@@ -52,3 +34,11 @@ sound_3.save
 url_4 = Cloudinary::Uploader.upload_large("app/assets/audio/rave_digger.mp3")["url"]
 sound_3 = Sound.new(title: 'Rap song from Mika', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
 sound_3.save
+
+
+auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)
+
+auction_2 = Auction.create(amount: 40, user_id: user_3.id, sound_id: sound_2.id)
+
+auction_3 = Auction.create(amount: 38, user_id: user_1.id, sound_id: sound_3.id)
+

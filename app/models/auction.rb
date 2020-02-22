@@ -2,8 +2,8 @@ class Auction < ApplicationRecord
   belongs_to :sound
   belongs_to :user
 
-  validate :amount_cannot_be_greater_than_maxprice
-  validate :amount_cannot_be_less_than_max_auction_amount
+ # validate :amount_cannot_be_greater_than_maxprice
+ # validate :amount_cannot_be_less_than_max_auction_amount
 
   def amount_cannot_be_greater_than_maxprice
     if amount > sound.maxprice

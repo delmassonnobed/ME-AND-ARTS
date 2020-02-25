@@ -1,11 +1,14 @@
 <style>
   .wrapper-box {
+    box-shadow: 0 0 15px rgba(2, 0, 0, 0.2);
+
     margin: 100px;
     border-radius: 10px;
     padding: 10px;
   }
   .my_sounds_card {
     padding: 10px;
+    border-top: 3px solid black;
   }
   .my_sounds_image {
     width: 20%;
@@ -31,7 +34,6 @@
 </style>
 <div class="wrapper-box">
   <div class="d-flex my_sounds_card">
-    <div class="my_sounds_image"></div>
     <div class="my_sounds_title d-flex align-items-center">Titre</div>
     <div class="my_sounds_genre d-flex align-items-center">Genre</div>
     <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
@@ -41,12 +43,6 @@
 
   <% @sounds.each do |sound| %>
     <div class="d-flex my_sounds_card">
-      <div class="my_sounds_image">
-        <!-- TODO: (( Couleur bleu clair >> #25b6c570))
-        ajouter les photos aux sons dans les seed -->
-        <!-- TODO: cl_image_tag avec sound.photo.key -->
-        <%#= cl_image_tag("rxliwn5efz19q0fktwog.jpg", width: 150, height: 120, crop: :fill)%>
-      </div>
 
 
 

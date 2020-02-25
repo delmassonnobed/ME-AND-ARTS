@@ -8,8 +8,7 @@ class SoundsController < ApplicationController
   end
 
   def my_sounds
-    @sounds = Sound.all
-    #@sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
+    @sounds = Sound.where(owner: current_user.id)
   end
 
   def index

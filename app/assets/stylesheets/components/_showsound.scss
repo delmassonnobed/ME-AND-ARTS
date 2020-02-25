@@ -1,0 +1,26 @@
+#sounds-show
+{background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+rgba(0, 0, 0, 0.4)), url(/assets/studio-d9daf179c2b2d3f8027e6351e13796154cda762750e79f226bf3997c9fda4df8.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.show-container{
+  background-color: white;
+  opacity:85%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.main-container{
+  height:calc(100vh - 70px);
+}
+
+.color-black {
+  color: black;
+}
+
+.padding-20 {
+  padding: 20px;
+}

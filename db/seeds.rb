@@ -21,6 +21,7 @@ user_3.save
 
 user_4 = User.new(email: 'djbobby@gmail.nope', password: 'lookatmybeat')
 
+
 url_1 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447765/Blackthorn_Bedow_c1w6z4.mp3"
 img_url_1 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647356/goh-rhy-yan-XgsVB9Uwpq8-unsplash_p2gnbm.jpg"
 sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "Hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100, audio_url: url_1, cloudinary_img: img_url_1)

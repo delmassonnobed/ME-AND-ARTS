@@ -11,7 +11,7 @@
 <%  end%>
 <br>
 
-<%= link_to "Buy now", buy_sound_path(@sound), method: :patch %>
+<%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-bid" %>
 
 <% if @sound.sold == true %>
   <% if @max_auction == @my_max %>

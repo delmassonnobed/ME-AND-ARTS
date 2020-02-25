@@ -101,6 +101,23 @@ img_url_16 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582656322/alex
 sound_16 = Sound.new(title: 'Shank in the air', bpm: 120, genre: "dub" ,price: 10, user_id: user_2.id, maxprice: 80, audio_url: url_16, cloudinary_img: img_url_16)
 sound_16.save
 
+# sounds owned by user_1
+
+url_17 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Guts_-_You_re_Living_Like_Pigs_veskru.mp3"
+sound_17 = Sound.new(title: 'You are living like pigs', bpm: 120, genre: "dub" ,price: 18, user_id: user_2.id, maxprice: 80, audio_url: url_17, owner: 1)
+sound_17.save
+
+url_18 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Guts_-_Want_It_Back_feat._Patrice_Official_Video_Clip_pfr0mz.mp3"
+sound_18 = Sound.new(title: 'Want it back', bpm: 120, genre: "dub" ,price: 8, user_id: user_3.id, maxprice: 80, audio_url: url_18, owner: 1)
+sound_18.save
+
+url_20 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Chinese_Man_-_Step_Back_Official_Music_Video_kx0lyt.mp3"
+sound_20 = Sound.new(title: 'Step Back', bpm: 120, genre: "dub" ,price: 55, user_id: user_2.id, maxprice: 80, audio_url: url_20, owner: 1)
+sound_20.save
+
+url_19 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Chinese_Man_-_Shikantaza_Official_Music_Video_mralk2.mp3"
+sound_19 = Sound.new(title: 'Shikantanza', bpm: 120, genre: "dub" ,price: 28, user_id: user_2.id, maxprice: 80, audio_url: url_19, owner: 1)
+sound_19.save
 
 
 

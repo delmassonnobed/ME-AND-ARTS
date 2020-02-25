@@ -1,30 +1,46 @@
-<% if @sound.auctions.empty? %>
-  <%= "Starting price : #{@sound.price} $" %>
-<% else %>
- <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
- <%= "Instant buy price : #{@sound.maxprice}" %>
-<% end %>
+<body id=sounds-show>
 
-<%= simple_form_for [@sound, @auction] do |f| %>
-  <%= f.input :amount, :label => "Make a bid !" %>
-  <%= f.submit "bid" %>
-<%  end%>
-<br>
+  <div class="container justif">
+   <div class="parent">
 
-<%= link_to "Buy now", buy_sound_path(@sound), method: :patch %>
 
-<% if @sound.sold == true %>
-  <% if @max_auction == @my_max %>
-    <%= "Won" %>
-  <% else %>
-    <%= "Lost" %>
-  <% end %>
-<% else %>
-  <% if @max_auction == @my_max %>
-     <%= "You have the highest bid" %>
-  <% else %>
-     <%= "Someone else has a higher bid" %>
-  <% end %>
-<% end %>
+      <div class= enfant_1>
+        <% if @sound.auctions.empty? %>
+        <%= "Starting price : #{@sound.price} $" %>
+      <% else %>
+       <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
+       <%= "Instant buy price : #{@sound.maxprice}" %>
+      <% end %>
+      </div>
 
-<%= cl_video_tag("pm2jb1u3mb4jsq3vhbwp", :flag=>"attachment") %>
+      <div class= enfant_2>
+      <%= simple_form_for [@sound, @auction] do |f| %>
+        <%= f.input :amount, :label => "Make a bid !" %>
+        <%= f.submit "bid" %>
+      <%  end%>
+      <br>
+      </div>
+
+      <%= link_to "Buy now", buy_sound_path(@sound), method: :patch %>
+
+      <div class= enfant_3>
+      <% if @sound.sold == true %>
+        <% if @max_auction == @my_max %>
+          <%= "Won" %>
+        <% else %>
+          <%= "Lost" %>
+        <% end %>
+      <% else %>
+        <% if @max_auction == @my_max %>
+           <%= "You have the highest bid" %>
+        <% else %>
+           <%= "Someone else has a higher bid" %>
+        <% end %>
+      <% end %>
+
+      <%= cl_video_tag("pm2jb1u3mb4jsq3vhbwp", :flag=>"attachment") %>
+     </div>
+    </div>
+  </div>
+
+</body>

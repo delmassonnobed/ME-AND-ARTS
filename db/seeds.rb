@@ -22,27 +22,33 @@ user_3.save
 user_4 = User.new(email: 'djbobby@gmail.nope', password: 'lookatmybeat')
 
 url_1 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447765/Blackthorn_Bedow_c1w6z4.mp3"
-sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100, audio_url: url_1)
+img_url_1 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647356/goh-rhy-yan-XgsVB9Uwpq8-unsplash_p2gnbm.jpg"
+sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100, audio_url: url_1, cloudinary_img: img_url_1)
 sound_1.save
 
 url_2 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447710/Drake_Type_Beat_Instrumental_-_Essence_Prod.Penacho_xfkw37.mp3"
-sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150, audio_url: url_2)
+img_url_2 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647347/warren-wong-bh4LQHcOcxE-unsplash_suioga.jpg"
+sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150, audio_url: url_2, cloudinary_img: img_url_2)
 sound_2.save
 
 url_3 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582368958/Schoolboy_Q_-_Hell_Of_A_Night_Instrumental_eas8fb.mp3"
-sound_3 = Sound.new(title: 'Beat this', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
+img_url_3 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647344/naveen-prajapat-OI7kPppj2-4-unsplash_sjimjc.jpg"
+sound_3 = Sound.new(title: 'Beat this', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3, cloudinary_img: img_url_3)
 sound_3.save
 
 url_4 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582369437/T.I._feat_Young_Thug_-_Aint_About_The_Money_official_instrumental_jknwm0.mp3"
-sound_4 = Sound.new(title: 'Rap song', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 1200, audio_url: url_3)
+img_url_4 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647319/lethu-zimu-bkyKiFfV91Q-unsplash_wipqkg.jpg"
+sound_4 = Sound.new(title: 'Rap song', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 1200, audio_url: url_4, cloudinary_img: img_url_4)
 sound_4.save
 
 url_5 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582370909/engelwood_-_crystal_dolphin_1_ywxhiz.mp3"
-sound_5 = Sound.new(title: 'Dolphins', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 180, audio_url: url_3)
+img_url_5 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647310/warren-wong-iIV0PUqhs00-unsplash_x9iokm.jpg"
+sound_5 = Sound.new(title: 'Dolphins', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 180, audio_url: url_5, cloudinary_img: img_url_5)
 sound_5.save
 
 url_6 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582370974/Miss_Chang_-_Chinese_Man_feat_Taiwan_MC_Cyph4_-_OFFICIAL_VIDEO_q5dvff.mp3"
-sound_6 = Sound.new(title: 'Miss Chang', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_3)
+img_url_6 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582647300/viktor-paris-tFkbdCf-l10-unsplash_xjz2fp.jpg"
+sound_6 = Sound.new(title: 'Miss Chang', bpm: 120, genre: "Pop" ,price: 25, user_id: user_2.id, maxprice: 80, audio_url: url_6, cloudinary_img: img_url_6)
 sound_6.save
 
 auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_1.id)

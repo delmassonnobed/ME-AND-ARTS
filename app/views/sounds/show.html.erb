@@ -7,7 +7,7 @@
 
 <%= simple_form_for [@sound, @auction] do |f| %>
   <%= f.input :amount, :label => "Make a bid !" %>
-  <%= f.submit "bid" %>
+  <%= f.submit "bid", id: "submit-bid" %>
 <%  end%>
 <br>
 

@@ -21,9 +21,12 @@ user_3.save
 
 user_4 = User.new(email: 'djbobby@gmail.nope', password: 'lookatmybeat')
 
+photo_url_1 = ""
+photo_1 = URI.open(photo_url_1)
 url_1 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447765/Blackthorn_Bedow_c1w6z4.mp3"
 sound_1 = Sound.new(title: 'Coolsound', bpm: 100, genre: "hip-hop" ,price: 20, user_id: user_1.id, maxprice: 100, audio_url: url_1)
-sound_1.save
+sound_1.photo.attach(io: photo_1, filename: "#{sound_1.title}.png", content_type: "image/png")
+sound_1.save!
 
 url_2 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1581447710/Drake_Type_Beat_Instrumental_-_Essence_Prod.Penacho_xfkw37.mp3"
 sound_2 = Sound.new(title: 'Coolersound', bpm: 110, genre: "Electro" ,price: 30, user_id: user_1.id, maxprice: 150, audio_url: url_2)

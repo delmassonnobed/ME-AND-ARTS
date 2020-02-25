@@ -22,12 +22,7 @@
 
 
 
-.wavy-card-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
+
 
 .wavy-card h2 {
   font-size: 16px;
@@ -35,10 +30,6 @@
 }
 
 
-.card-head {
-  display: flex;
-  justify-content: space-between;
-}
 
 .controls {
   display: flex;
@@ -46,11 +37,6 @@
 
 }
 
-
-.card-foot {
-  display: flex;
-  justify-content: space-between;
-}
 
 .card-desc {
   display: flex;
@@ -81,7 +67,6 @@
   color: white;
 }
 
-
 .card-desc .card-desc-infos {
   padding: 16px;
   display: flex;
@@ -107,7 +92,12 @@
   height: 45px;
 }
 
-.most {
-  margin-top: 50px;
+#player {
+  width: 400px;
 }
+
+
+
+
+
 

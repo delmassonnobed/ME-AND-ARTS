@@ -8,8 +8,8 @@ class SoundsController < ApplicationController
   end
 
   def my_sounds
-    @sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
-    # @sounds = <<< "Sons gagnes" a ajouter dans la seed
+    @sounds = Sound.all
+    #@sounds = Sound.where(sold: true).filter { |sound| sound.won_by_me?(current_user) }
   end
 
   def index

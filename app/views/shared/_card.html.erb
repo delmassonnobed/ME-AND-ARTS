@@ -3,7 +3,11 @@
       <% @sounds.each do |sound| %>
       <% if sound.sold == false %>
       <div class="col-6">
-        <div class="wavy-card" id="sound-<%= sound.id %>" data-url="<%= sound.audio_url %>">
+          <div class="wavy-card" id="sound-<%= sound.id %>" data-url="<%= sound.audio_url %>">
+          <div class="imageson">
+          <%= cl_image_tag sound.cloudinary_img,width: 400, height: 300%>
+        </div>
+
           <audio id="player" controls>
             <source src="<%= sound.audio_url %>" type="audio/mp3" />
           </audio>

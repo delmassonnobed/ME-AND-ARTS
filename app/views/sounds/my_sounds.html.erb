@@ -1,11 +1,66 @@
+<style>
+  .wrapper-box {
+    margin: 100px;
+    border-radius: 10px;
+    background-color: #25b6c570;
+    padding: 10px;
+  }
+  .my_sounds_card {
+    padding: 10px;
+  }
+  .my_sounds_image {
+    width: 20%;
+  }
+  .my_sounds_image img {
+    border-radius: 5px;
+  }
+  .my_sounds_title {
+    width: 20%;
+  }
+  .my_sounds_genre {
+    width: 15%;
+  }
+  .my_sounds_bpm {
+    width: 15%;
+  }
+  .my_sounds_player {
+    width: 30%;
+  }
+  .cloudi_image {
+    border-radius: 5px;
+  }
+</style>
+<div class="wrapper-box">
+  <div class="d-flex my_sounds_card">
+    <div class="my_sounds_image"></div>
+    <div class="my_sounds_title d-flex align-items-center">Titre</div>
+    <div class="my_sounds_genre d-flex align-items-center">Genre</div>
+    <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
+    <div class="my_sounds_bpm d-flex align-items-center">Prix</div>
+    <div class="my_sounds_player d-flex align-items-center"></div>
+  </div>
 
-<% @sounds.each do |sound| %>
-<% if sound.mp3_file.attachment %>
-  <%= link_to sound.mp3_file.attachment.filename, rails_blob_path(sound.mp3_file.attachment, disposition: 'attachment') %>
-  <audio id="player" controls controlsList="nodownload">
-      <source src="<%= sound.audio_url %>" type="audio/mp3" />
-  </audio>
+  <% @sounds.each do |sound| %>
+    <div class="d-flex my_sounds_card">
+      <div class="my_sounds_image">
+        <!-- TODO: ajouter les photos aux sons dans les seed -->
+        <!-- TODO: cl_image_tag avec sound.photo.key -->
+        <%#= cl_image_tag("rxliwn5efz19q0fktwog.jpg", width: 150, height: 120, crop: :fill)%>
+      </div>
+
+
+
+      <div class="my_sounds_title d-flex align-items-center"><%= sound.title %></div>
+      <div class="my_sounds_genre d-flex align-items-center"><%= sound.genre %></div>
+      <div class="my_sounds_bpm d-flex align-items-center"><%= sound.bpm %></div>
+      <div class="my_sounds_bpm d-flex align-items-center"><%= sound.price %> $</div>
+      <div class="my_sounds_player d-flex align-items-center">
+        <audio id="player-<%= sound.id %>" controls>
+          <source src="<%= sound.audio_url %>" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
   <% end %>
-<% end %>
+</div>
 
 

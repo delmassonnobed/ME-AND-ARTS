@@ -6,6 +6,7 @@ class Sound < ApplicationRecord
   validates :genre, presence: true
 
   has_one_attached :mp3_file
+  has_one_attached :image
 
   has_many :auctions, dependent: :destroy
 

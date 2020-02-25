@@ -1,39 +1,43 @@
+<div class="container main-container d-flex justify-content-center align-items-center">
+  <div class='show-container d-flex'>
+    <div class='d-flex flex-column'>
+      <%= cl_image_tag(@sound.cloudinary_img, width:300, height:250) %>
+      <audio id="player" controls controlsList="nodownload">
+          <source src="<%= @sound.audio_url %>" type="audio/mp3" />
+      </audio>
+    </div>
 
-<body id=sounds-show>
+    <div class="d-flex flex-column align-items-center color-black padding-20">
+      <% if @sound.auctions.empty? %>
+        <%= "Starting price : #{@sound.price} $" %>
+      <% else %>
+       <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
+       <%= "Instant buy price : #{@sound.maxprice}" %>
+      <% end %>
 
-<div class="container">
+      <%= simple_form_for [@sound, @auction] do |f| %>
+          <%= f.input :amount, :label => "Make a bid !" %>
+          <div class="d-flex justify-content-center width-250 align-items-center">
+            <%= f.submit "bid", id: "submit-bid" %>
+            <%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-bid", class: "ml-3" %>
+          </div>
+      <%  end%>
+      <br>
 
-<% if @sound.auctions.empty? %>
-  <%= "Starting price : #{@sound.price} $" %>
-<% else %>
- <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
- <%= "Instant buy price : #{@sound.maxprice}" %>
-<% end %>
 
-<%= simple_form_for [@sound, @auction] do |f| %>
-  <%= f.input :amount, :label => "Make a bid !" %>
-  <%= f.submit "bid", id: "submit-bid" %>
-<%  end%>
-<br>
-
-<%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-bid" %>
-
-<% if @sound.sold == true %>
-  <% if @max_auction == @my_max %>
-    <%= "Won" %>
-  <% else %>
-    <%= "Lost" %>
-  <% end %>
-<% else %>
-  <% if @max_auction == @my_max %>
-     <%= "You have the highest bid" %>
-  <% else %>
-     <%= "Someone else has a higher bid" %>
-  <% end %>
-<% end %>
-
-<%= cl_video_tag("pm2jb1u3mb4jsq3vhbwp", :flag=>"attachment") %>
-
+      <% if @sound.sold == true %>
+        <% if @max_auction == @my_max %>
+          <%= "Won" %>
+        <% else %>
+          <%= "Lost" %>
+        <% end %>
+      <% else %>
+        <% if @max_auction == @my_max %>
+           <%= "You have the highest bid" %>
+        <% else %>
+           <%= "Someone else has a higher bid" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-</body>

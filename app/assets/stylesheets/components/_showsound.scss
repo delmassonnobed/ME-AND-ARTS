@@ -5,3 +5,22 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 }
+
+.show-container{
+  background-color: white;
+  opacity:85%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.main-container{
+  height:calc(100vh - 70px);
+}
+
+.color-black {
+  color: black;
+}
+
+.padding-20 {
+  padding: 20px;
+}

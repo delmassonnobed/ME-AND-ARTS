@@ -1,9 +1,3 @@
-body#sounds-show {
-  background-image: linear-gradient(rgba(0,0,0,5),rgba(0,0,0,5)), asset-url('equalizer-153212_1280.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 #sounds-show {
   p {
@@ -12,11 +6,11 @@ body#sounds-show {
 }
 
 #new_auction {
-  margin: 0 25vw;
+  margin: 0 35vw;
 }
 
 #submit-bid {
-   color: white;
+  color: white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
@@ -26,11 +20,11 @@ body#sounds-show {
 }
 
 #submit-buy {
-   color: white;
+  color: white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #50bda1);
+  background: linear-gradient(#61d4b3, #fdd365);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
 }

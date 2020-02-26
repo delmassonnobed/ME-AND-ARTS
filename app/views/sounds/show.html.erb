@@ -72,7 +72,7 @@
       <%= simple_form_for [@sound, @auction] do |f| %>
           <%= f.input :amount, :label => "Make a bid !" %>
           <div class="d-flex justify-content-center width-250 align-items-center">
-            <%= f.submit "bid", id: "submit-bid" %>
+            <%= f.submit "Bid", id: "submit-bid" %>
             <%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-bid", class: "ml-3" %>
           </div>
       <%  end%>

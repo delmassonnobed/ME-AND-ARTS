@@ -17,7 +17,7 @@
 }
 
 #submit-bid {
-  height: 50px;
+  /* height: 50px; */
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
@@ -35,4 +35,6 @@
   background: linear-gradient(#61d4b3, #fdd365);
   transition: background 0.3s ease;
   border: 1px solid #0F60C4;
+  text-align: center;
+  vertical-align: middle;
 }

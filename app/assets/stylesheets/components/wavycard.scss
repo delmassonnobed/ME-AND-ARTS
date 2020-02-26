@@ -1,6 +1,6 @@
 .wavy-card {
   border-radius: 30px;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-right: 20px;
   padding-left: 20px;
   // margin-left: 300px;
@@ -61,8 +61,9 @@
 }
 
 .card-desc p {
+  padding-left: 15px;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
-  opacity: .7;
   margin: 0;
   color: white;
 }
@@ -84,7 +85,8 @@
 }
 
 .pricing {
-  font-size: 25px !important;
+  font-size: 50px !important;
+
 }
 
 #btnench {
@@ -92,16 +94,32 @@
   height: 45px;
 }
 
-#player {
-  width: 400px;
+#BTNBID {
+  width: 118px !important;
+  height: 34px !important;
+  border-radius:12px 0 12px 0;
+  background: #d34836;
+  border:none;
+  color:#fff;
+  font:bold 12px Verdana;
+  padding:6px 0 6px 0;
+
+
 }
+
+
+#player {
+  width: 350px;
+  margin-top: 6px;}
+
+
 
 img { vertical-align: middle;
 border-style: none;
 object-fit: cover;
 }
 
-a {color: yellow; }
+a {color: white; }
 
 
 

@@ -13,15 +13,17 @@
           </audio>
           <div class="card-desc">
             <div>
-              <p><%= sound.genre %></p>
-              <p><%= "Bpm: #{sound.bpm}" %></p>
+              <p><strong><%= sound.genre %></strong></p>
+              <p><strong><%= "Bpm: #{sound.bpm}" %></strong></p>
             </div>
-              <%= link_to 'Bid', sound_path(sound) %>
+            <div>
+            <button type="button" id="BTNBID" ><%= link_to 'BID/BUY NOW!', sound_path(sound) %></button>
+            </div>
               <h2 class="pricing"> </h2>
               <% if sound.auctions.empty? %>
-                <%= "#{sound.price} $" %>
+                <strong><%= "#{sound.price} $" %></strong>
               <% else %>
-                <%= "#{sound.auctions.map{|auction| auction.amount}.compact.max} $" %>
+                <strong><%= "#{sound.auctions.map{|auction| auction.amount}.compact.max} $" %></strong>
               <% end %>
           </div>
         </div>

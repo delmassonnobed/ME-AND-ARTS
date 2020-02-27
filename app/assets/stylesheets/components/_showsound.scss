@@ -7,7 +7,7 @@ background-attachment: fixed;
 }
 
 .show-container{
-  background-color: white;
+  background-color: black;
   opacity:85%;
   padding: 20px;
   border-radius: 8px;
@@ -18,7 +18,7 @@ background-attachment: fixed;
 }
 
 .color-black {
-  color: black;
+  color: white;
 }
 
 .padding-20 {
@@ -49,17 +49,19 @@ h1{
     display: inline-block;
     font-weight: 100;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
 }
 #clockdiv > div{
     padding: 10px;
     border-radius: 3px;
-    background: #00BF96;
+    background: black;
     display: inline-block;
 }
 #clockdiv div > span{
     padding: 15px;
-    border-radius: 3px;
+    border-radius: 45px;
     background: #00816A;
     display: inline-block;
 }
+
+

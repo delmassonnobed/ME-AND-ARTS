@@ -105,7 +105,7 @@ sound_16.save
 # sounds owned by user_1
 
 url_17 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Guts_-_You_re_Living_Like_Pigs_veskru.mp3"
-sound_17 = Sound.new(title: 'You are living like pigs', bpm: 120, genre: "dub" ,price: 18, user_id: user_2.id, maxprice: 80, audio_url: url_17, owner: 1)
+sound_17 = Sound.new(title: 'You are living like kings', bpm: 120, genre: "dub" ,price: 18, user_id: user_2.id, maxprice: 80, audio_url: url_17, owner: 1)
 sound_17.save
 
 url_18 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Guts_-_Want_It_Back_feat._Patrice_Official_Video_Clip_pfr0mz.mp3"

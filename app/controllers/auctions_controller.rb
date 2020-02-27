@@ -5,6 +5,14 @@ class AuctionsController < ApplicationController
     @following_sounds = current_user.followings.map {|following|
       following.sound}
     @my_sounds = [@auction_sounds + @following_sounds].flatten
+    auctions = Auction.where(user_id:current_user)
+    @sounds = current_user.auctions.map {|auction| auction.sound}.uniq
+
+  end
+
+  def follow
+
+
   end
 
   def show
@@ -25,8 +33,8 @@ class AuctionsController < ApplicationController
     end
   end
 
-
   def auction_params
     params.require(:auction).permit(:amount)
   end
 end
+

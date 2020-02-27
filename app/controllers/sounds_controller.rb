@@ -32,6 +32,9 @@ class SoundsController < ApplicationController
     redirect_to my_sounds_path
   end
 
+def bid
+end
+
   def create
     @sound = Sound.new(sound_params)
     @sound.user = current_user

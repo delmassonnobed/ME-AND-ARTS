@@ -2,7 +2,7 @@
   .wrapper-box {
     box-shadow: 0 0 15px rgba(2, 0, 0, 0.2);
     background-color: black;
-    opacity: 50%;
+    opacity: 65%;
     margin: 100px;
     border-radius: 10px;
     padding: 10px;
@@ -20,12 +20,18 @@
   }
   .my_sounds_title {
     width: 20%;
+    color: white;
+    font-weight: 500;
   }
   .my_sounds_genre {
     width: 15%;
+    color: white;
+    font-weight: 500;
   }
   .my_sounds_bpm {
     width: 15%;
+    color: white;
+    font-weight: 500;
   }
   .my_sounds_player {
     width: 30%;
@@ -35,9 +41,11 @@
   }
 
   #SBPolice {
-    color: white;
+    color: #FFFFFF;
     font-family: 'Courier New', monospace;
-    font-weight: 900;
+    font-weight: 900px;
+    font-size: 20px;
+
   }
 
 </style>
@@ -47,7 +55,7 @@
     <div class="my_sounds_genre d-flex align-items-center">Genre</div>
     <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
     <div class="my_sounds_bpm d-flex align-items-center">Price</div>
-    <div class="my_sounds_player d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listen And Download</div>
+    <div class="my_sounds_player d-flex align-items-center"> &nbsp;&nbsp;&nbsp;Listen And Download</div>
   </div>
 
   <% @sounds.each do |sound| %>

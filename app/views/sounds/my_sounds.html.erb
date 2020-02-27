@@ -1,14 +1,16 @@
 <style>
   .wrapper-box {
     box-shadow: 0 0 15px rgba(2, 0, 0, 0.2);
-
+    background-color: black;
+    opacity: 50%;
     margin: 100px;
     border-radius: 10px;
     padding: 10px;
   }
   .my_sounds_card {
     padding: 10px;
-    border-top: 3px solid black;
+    border-top: 3px solid red;
+    line-height: 2;
   }
   .my_sounds_image {
     width: 20%;
@@ -31,14 +33,21 @@
   .cloudi_image {
     border-radius: 5px;
   }
+
+  #SBPolice {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+  }
+
 </style>
 <div class="wrapper-box">
-  <div class="d-flex my_sounds_card">
-    <div class="my_sounds_title d-flex align-items-center">Title</div>
+  <div id="SBPolice" class="d-flex my_sounds_card">
+    <div class="my_sounds_title d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;Title</div>
     <div class="my_sounds_genre d-flex align-items-center">Genre</div>
     <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
     <div class="my_sounds_bpm d-flex align-items-center">Price</div>
-    <div class="my_sounds_player d-flex align-items-center">Listen And Download</div>
+    <div class="my_sounds_player d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listen And Download</div>
   </div>
 
   <% @sounds.each do |sound| %>

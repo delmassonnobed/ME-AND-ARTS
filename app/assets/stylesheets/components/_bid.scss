@@ -18,11 +18,11 @@
 
 #submit-bid {
   /* height: 50px; */
-  color: white;
+  color: red;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: #d34836;
+  background: white;
   transition: background 0.3s ease;
   border: #d34836;
 }
@@ -37,4 +37,8 @@
   border: #d34836;
   text-align: center;
   vertical-align: middle;
+}
+
+#submit-bid:disabled {
+text-decoration: line-through;
 }

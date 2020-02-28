@@ -33,6 +33,7 @@ class SoundsController < ApplicationController
   end
 
 def bid
+
 end
 
   def create

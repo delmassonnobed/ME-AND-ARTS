@@ -72,7 +72,8 @@
       <%= simple_form_for [@sound, @auction] do |f| %>
           <%= f.input :amount, :label => "Make a bid !" %>
           <div class="d-flex justify-content-center width-250 align-items-center">
-            <%= f.submit " Bid ", id: "submit-bid", :disabled => @max_auction == @my_max %>
+            <%#= f.submit " Bid ", id: "submit-bid", :disabled => @max_auction == @my_max %>
+            <%= f.submit "Bid", class: "ml-3", id: "submit-bid" %>
             <%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-buy", class: "ml-3" %>
           </div>
       <%  end%>

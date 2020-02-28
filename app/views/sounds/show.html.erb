@@ -62,18 +62,18 @@
     <div class="d-flex flex-column align-items-center color-black padding-20">
       <% if @sound.auctions.empty? %>
         <%= "Starting price : #{@sound.price} $" %> <br>
-        <%= "Instant buy price : #{@sound.maxprice}" %>
+        <%= "Instant buy price : #{@sound.maxprice}$" %>
 
       <% else %>
        <%= "Highest bid so far : #{@sound.auctions.map{|auction| auction.amount}.compact.max} $" %> <br>
-       <%= "Instant buy price : #{@sound.maxprice}" %>
+       <%= "Instant buy price : #{@sound.maxprice} $" %>
       <% end %>
 
       <%= simple_form_for [@sound, @auction] do |f| %>
           <%= f.input :amount, :label => "Make a bid !" %>
           <div class="d-flex justify-content-center width-250 align-items-center">
-            <%= f.submit "Bid", id: "submit-bid" %>
-            <%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-bid", class: "ml-3" %>
+            <%= f.submit " Bid ", id: "submit-bid", :disabled => @max_auction == @my_max %>
+            <%= link_to "Buy now", buy_sound_path(@sound), method: :patch, id: "submit-buy", class: "ml-3" %>
           </div>
       <%  end%>
       <br>
@@ -88,7 +88,7 @@
       <% else %>
         <% if @max_auction == @my_max %>
            <%= "You have the highest bid" %>
-        <% else %>
+           <% else %>
            <%= "Someone else has a higher bid" %>
         <% end %>
       <% end %>

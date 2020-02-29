@@ -23,6 +23,11 @@
     color: white;
     font-weight: 500;
   }
+  .title-style{
+    color: white !important;
+    text-decoration: none !important;
+  }
+
   .my_sounds_genre {
     width: 15%;
     color: white;
@@ -82,11 +87,11 @@
 
 <strong> </strong>
 
-      <div class="my_sounds_title d-flex align-items-center"><%= link_to sound.title, sound_path(sound) %></div>
-      <div class="my_sounds_genre d-flex align-items-center"><%= sound.genre %></div>
-      <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.bpm %></div>
-      <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.auctions.sort_by { |auction| auction.amount }.last.amount %> $</div>
-      <div class="my_sounds_player d-flex align-items-center">
+    <div class="my_sounds_title d-flex align-items-center"><%= link_to sound.title, sound_path(sound), class:'title-style' %></div>
+    <div class="my_sounds_genre d-flex align-items-center"><%= sound.genre %></div>
+    <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.bpm %></div>
+    <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.auctions.sort_by { |auction| auction.amount }.last.amount %> $</div>
+    <div class="my_sounds_player d-flex align-items-center">
         &nbsp;&nbsp;&nbsp;<audio id="player-<%= sound.id %>" controls>
           <source src="<%= sound.audio_url %>" type="audio/mp3" />
         </audio>

@@ -38,6 +38,17 @@ body#sounds-my_sounds {
   background-attachment: fixed;
 }
 
+
+
+
+body#auctions-index {background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+rgba(0, 0, 0, 0.4)), asset-url('genre_folk.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;}
+
+
+
 /* Top Info */
 #title {
   width: 100%;

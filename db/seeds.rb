@@ -162,5 +162,5 @@ sound_19.save
 auction_2 = Auction.create(amount: 40, user_id: user_1.id, sound_id: sound_2.id)
 auction_1 = Auction.create(amount: 78, user_id: user_3.id, sound_id: sound_2.id)
 
-auction_3 = Auction.create(amount: 38, user_id: user_1.id, sound_id: sound_3.id)
+auction_3 = Auction.create(amount: 38, user_id: user_1.id, sound_id: sound_21.id)
 

@@ -33,6 +33,10 @@
     color: white;
     font-weight: 500;
   }
+
+  .my_sounds_time{
+    width: 10%;
+  }
   .my_sounds_player {
     width: 30%;
   }
@@ -57,6 +61,8 @@
     <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
     <div class="my_sounds_bpm d-flex align-items-center">Price</div>
     <div class="my_sounds_player d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listen</div>
+    <div class="my_sounds_time d-flex align-items-center"> Countdown clock</div>
+    <div class="my_sounds_time d-flex align-items-center"> First position?</div>
   </div>
 
   <% @sounds.each do |sound| %>
@@ -64,7 +70,7 @@
 
 
 
-      <div class="my_sounds_title d-flex align-items-center"><%= sound.title %></div>
+      <div class="my_sounds_title d-flex align-items-center"><%= link_to sound.title, sound_path(sound) %></div>
       <div class="my_sounds_genre d-flex align-items-center"><%= sound.genre %></div>
       <div class="my_sounds_bpm d-flex align-items-center"><%= sound.bpm %></div>
       <div class="my_sounds_bpm d-flex align-items-center"><%= sound.auctions.sort { |a,b| a.amount <=> b.amount }.first.amount %> $</div>
@@ -73,8 +79,19 @@
           <source src="<%= sound.audio_url %>" type="audio/mp3" />
         </audio>
       </div>
+     <div class="my_sounds_time d-flex align-items-center"><%= rand(7..10) %> hours</div>
+     <%  my_max = sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max %>
+     <% auction = sound.auctions.map{|auction| auction.amount}.compact.max %>
+     <div class="my_sounds_time d-flex align-items-center">
+      <% if my_max == auction  %>
+      <span> You are the first</span>
+      <% else %>
+      <span> Not the leader </span>
+      <% end %>
+    </div>
     </div>
   <% end %>
 </div>
+
 
 

@@ -86,8 +86,10 @@
           <%= "Lost" %>
         <% end %>
       <% else %>
-        <% if @max_auction == @my_max %>
-           <%= "You have the highest bid" %>
+        <% if @sound.auctions.empty? %>
+            <%= "Be the first to bid !" %>
+        <% elsif @max_auction == @my_max %>
+           <%= "You have the highest bid !" %>
         <% else %>
            <%= "Someone else has a higher bid" %>
         <% end %>

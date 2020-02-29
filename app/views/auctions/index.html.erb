@@ -35,7 +35,7 @@
   }
 
   .my_sounds_time{
-    width: 10%;
+    width: 30%;
   }
   .my_sounds_player {
     width: 30%;
@@ -48,45 +48,55 @@
     color: #FFFFFF;
     font-family: 'Courier New', monospace;
     font-weight: 900px;
-    font-size: 20px;
+    font-size: 16px;
 
   }
+
+  .fa-check:before {
+    color: green;
+    padding: 5px;
+}
+
+  .fa-times:before {
+    color: green;
+}
+
 
 </style>
 
 <div class="wrapper-box">
   <div id="SBPolice" class="d-flex my_sounds_card">
-    <div class="my_sounds_title d-flex align-items-center">&nbsp;&nbsp;&nbsp;Title</div>
+    <div class="my_sounds_title d-flex align-items-center">&nbsp;&nbsp;Title</div>
     <div class="my_sounds_genre d-flex align-items-center">Genre</div>
     <div class="my_sounds_bpm d-flex align-items-center">BPM</div>
     <div class="my_sounds_bpm d-flex align-items-center">Price</div>
     <div class="my_sounds_player d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listen</div>
-    <div class="my_sounds_time d-flex align-items-center"> Countdown clock</div>
-    <div class="my_sounds_time d-flex align-items-center"> First position?</div>
+    <div class="my_sounds_time d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Countdown clock</div>
+    <div class="my_sounds_time d-flex align-items-center"> &nbsp;&nbsp;&nbsp;&nbsp;Bid position</div>
   </div>
 
   <% @sounds.each do |sound| %>
     <div class="d-flex my_sounds_card">
 
-
+<strong> </strong>
 
       <div class="my_sounds_title d-flex align-items-center"><%= link_to sound.title, sound_path(sound) %></div>
       <div class="my_sounds_genre d-flex align-items-center"><%= sound.genre %></div>
-      <div class="my_sounds_bpm d-flex align-items-center"><%= sound.bpm %></div>
-      <div class="my_sounds_bpm d-flex align-items-center"><%= sound.auctions.sort { |a,b| a.amount <=> b.amount }.first.amount %> $</div>
+      <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.bpm %></div>
+      <div class="my_sounds_bpm d-flex align-items-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= sound.auctions.sort_by { |auction| auction.amount }.last.amount %> $</div>
       <div class="my_sounds_player d-flex align-items-center">
-        <audio id="player-<%= sound.id %>" controls>
+        &nbsp;&nbsp;&nbsp;<audio id="player-<%= sound.id %>" controls>
           <source src="<%= sound.audio_url %>" type="audio/mp3" />
         </audio>
       </div>
-     <div class="my_sounds_time d-flex align-items-center"><%= rand(7..10) %> hours</div>
+     <div class="my_sounds_time d-flex align-items-center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= rand(7..10) %> hours</div></strong>
      <%  my_max = sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max %>
      <% auction = sound.auctions.map{|auction| auction.amount}.compact.max %>
      <div class="my_sounds_time d-flex align-items-center">
       <% if my_max == auction  %>
-      <span> You are the first</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span>The leader <i class="fa fa-check"></i></span></strong>
       <% else %>
-      <span> Not the leader </span>
+      <strong><span> &nbsp;&nbsp;Not leader <i class="fa fa-times"></i></span></strong>
       <% end %>
     </div>
     </div>

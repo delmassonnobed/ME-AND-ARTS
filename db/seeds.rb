@@ -102,6 +102,42 @@ img_url_16 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582656322/alex
 sound_16 = Sound.new(title: 'Shank in the air', bpm: 120, genre: "dub" ,price: 10, user_id: user_2.id, maxprice: 80, audio_url: url_16, cloudinary_img: img_url_16)
 sound_16.save
 
+
+url_21 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582981908/Kojo_Funds_ft_Wizkid_-_I_Like_Instrumental_Prod._By_Ak_Marv_1_x0m8hp.mp3"
+img_url_21 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582982045/ron-mcclenny-ZGAFT-6zYYk-unsplash_ddrluu.jpg"
+sound_21 = Sound.new(title: 'Wizkid', bpm: 120, genre: "afrobeat" ,price: 50, user_id: user_2.id, maxprice: 180, audio_url: url_21, cloudinary_img: img_url_21)
+sound_21.save
+
+url_22 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582981865/Burna_Boy_-_Ye_Instrumental_Afrobeat_Instrumental_adh6d2.mp3"
+img_url_22 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582982088/demorris-byrd-27UDwEeBgeE-unsplash_euqbrf.jpg"
+sound_22 = Sound.new(title: 'burnaboy', bpm: 120, genre: "afrobeat" ,price: 50, user_id: user_2.id, maxprice: 180, audio_url: url_22, cloudinary_img: img_url_22)
+sound_22.save
+
+
+url_23 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582981939/RSPN_-_Blank_Kytt_No_Copyright_Music_dvqooh.mp3"
+img_url_23 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582985421/lewagone_cmylck.jpg"
+sound_23 = Sound.new(title: 'lewagon', bpm: 100, genre: "alternative" ,price: 70, user_id: user_2.id, maxprice: 200, audio_url: url_23, cloudinary_img: img_url_23)
+sound_23.save
+
+
+
+
+url_24 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582981923/Lil_Baby_Gunna_-_Drip_Too_Hard_-_BeatInstrumental_lla8pj.mp3"
+img_url_24 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582981800/tvbeats-W9kTRj1UERo-unsplash_ru9aii.jpg"
+sound_24 = Sound.new(title: 'lilbaby', bpm: 100, genre: "Trap" ,price: 50, user_id: user_2.id, maxprice: 180, audio_url: url_24, cloudinary_img: img_url_24)
+sound_24.save
+
+
+
+url_25 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582982393/Plug_Walk_Instrumental_Best_Version_1_zdjwmi.mp3"
+img_url_25 = "https://res.cloudinary.com/dofat3r9t/image/upload/v1582982128/tanya-trofymchuk-Q4hB0wK-TEE-unsplash_c1rnyj.jpg"
+sound_25 = Sound.new(title: 'richthekid', bpm: 100, genre: "Trap" ,price: 50, user_id: user_2.id, maxprice: 180, audio_url: url_25, cloudinary_img: img_url_25)
+sound_25.save
+
+
+
+
+
 # sounds owned by user_1
 
 url_17 = "https://res.cloudinary.com/dofat3r9t/video/upload/v1582659118/Guts_-_You_re_Living_Like_Pigs_veskru.mp3"

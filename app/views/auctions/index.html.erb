@@ -96,7 +96,7 @@
           <source src="<%= sound.audio_url %>" type="audio/mp3" />
         </audio>
       </div>
-     <div class="my_sounds_time d-flex align-items-center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= rand(7..10) %> hours</div></strong>
+     <div class="my_sounds_time d-flex align-items-center"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= rand(3..4) %> hours</div></strong>
      <%  my_max = sound.auctions.where(user_id: current_user.id).map{|auction| auction.amount}.compact.max %>
      <% auction = sound.auctions.map{|auction| auction.amount}.compact.max %>
      <div class="my_sounds_time d-flex align-items-center">
